@@ -97,15 +97,29 @@
         </div>
 
         <fieldset>
-            <legend class='legend'>Número Primo</legend>
+            <%!
+                boolean flag = false;  
+            %>
+
+            <%
+                for (int i = 2; i < tempF; i++) {
+                    if (tempF % i == 0) {
+                        flag = true;
+                        System.out.println(tempF + " é divisível por " + i);
+                    }
+                    else {
+                        continue;}}
+        
+                //retorna aviso caso seja primo
+                if (!flag) {
+                    System.out.println(tempF + " é primo");}
+
+
+            %>
+
             <p>
-                <form action='convert.jsp' method='post'>
-                    Fahrenheit temperature: <input type='text' name = 'tempF' id = 'tempF'/>
-                    <p>
-                        <input type='submit' style= 'font-weight: bold;' value = 'Convert do celsius'/>
-                    </p>
-                </form>
-            </p> 
+                <a href='index.html'>Outro número</a>
+            </p>
         </fieldset>
 
 
